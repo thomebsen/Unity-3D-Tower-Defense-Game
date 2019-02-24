@@ -167,6 +167,7 @@ GameObject:
   - component: {fileID: 8471742426941789938}
   - component: {fileID: 2730747433702957846}
   - component: {fileID: 7127013631794409347}
+  - component: {fileID: 5441745965329014988}
   m_Layer: 11
   m_Name: Shrek
   m_TagString: Enemy
@@ -214,7 +215,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 100
+  m_Speed: 5
   m_Acceleration: 70
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -255,3 +256,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.29375765, y: 1.097065, z: 0.4098518}
   m_Center: {x: -0.034711346, y: 0.58524156, z: 0.03906125}
+--- !u!114 &5441745965329014988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7034503628841883468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d4c07aa19233e4cb11d1581bc2d2c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 20
