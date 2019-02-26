@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2142667677491178385}
   - component: {fileID: 2142667677491178391}
   - component: {fileID: 2142667677491178390}
-  - component: {fileID: 3529904606727627314}
+  - component: {fileID: 5474498892269829932}
   m_Layer: 11
   m_Name: Enemy
   m_TagString: Enemy
@@ -147,7 +147,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finishPoint: {fileID: 320495505363388788, guid: 0589d676f6ba3ad458a4c723ff5d15a6,
     type: 3}
---- !u!114 &3529904606727627314
+  enemyHealth: 5
+--- !u!114 &5474498892269829932
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,4 +160,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17d4c07aa19233e4cb11d1581bc2d2c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
+  health: 2

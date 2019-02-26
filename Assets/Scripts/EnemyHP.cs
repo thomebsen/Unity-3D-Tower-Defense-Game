@@ -8,7 +8,7 @@ public class EnemyHP : MonoBehaviour
     public int health = 2;
     BulletFire bulletFire;
 
-    void Update(){if (health == 0){Destroy(gameObject);}}
+    void Update(){if (health <= 0){Destroy(gameObject);}}
 
     
 
