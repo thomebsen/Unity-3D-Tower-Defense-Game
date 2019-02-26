@@ -10,7 +10,7 @@ public class PlayerDamageScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject thePlayer = GameObject.Find("Player");
+        GameObject thePlayer = GameObject.Find("GameMaster");
         psc = thePlayer.GetComponent<PlayerControlScript>();
     }
 

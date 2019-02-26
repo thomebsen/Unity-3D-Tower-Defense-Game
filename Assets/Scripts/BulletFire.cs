@@ -6,22 +6,14 @@ public class BulletFire : MonoBehaviour
 {
 
     private Transform target;
-
     public float speed = 70f;
-
-    public float dmg1 = 1;
-
-  
-
-
+    public GameObject impactEffect;
 
     public void Seek(Transform _target)
     {
         target = _target;
     }
 
-
-    // Update is called once per frame
     void Update()
     {
         if (target == null)
@@ -34,8 +26,7 @@ public class BulletFire : MonoBehaviour
         float distanceThisFrame = speed * Time.deltaTime;
 
         if (dir.magnitude <= distanceThisFrame)
-        {       
-           
+        {
             HitTarget();
             return;
         }
@@ -45,9 +36,9 @@ public class BulletFire : MonoBehaviour
 
     void HitTarget()
     {
+        GameObject effectIns = (GameObject) Instantiate(impactEffect, transform.position, transform.rotation);
+        Destroy(effectIns, 1.5f);
         Destroy(gameObject);
-        
-
     }
 
 

@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 2142667677491178387}
   - component: {fileID: 2142667677491178384}
   - component: {fileID: 2142667677491178385}
-  - component: {fileID: 2142667677491178390}
   - component: {fileID: 2142667677491178391}
+  - component: {fileID: 2142667677491178390}
+  - component: {fileID: 3529904606727627314}
   m_Layer: 11
   m_Name: Enemy
   m_TagString: Enemy
@@ -106,7 +107,7 @@ NavMeshAgent:
   m_Radius: 0.5
   m_Speed: 5
   m_Acceleration: 20
-  avoidancePriority: 50
+  avoidancePriority: 99
   m_AngularSpeed: 120
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
@@ -116,20 +117,6 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &2142667677491178390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2142667677491178388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34f71aa87eb5a604397a31ce09f6c8d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyMesh: {fileID: 2142667677491178385}
-  finishPointTag: FinishPoint
 --- !u!54 &2142667677491178391
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -146,3 +133,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2142667677491178390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142667677491178388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34f71aa87eb5a604397a31ce09f6c8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMesh: {fileID: 2142667677491178385}
+  finishPointTag: FinishPoint
+--- !u!114 &3529904606727627314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142667677491178388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d4c07aa19233e4cb11d1581bc2d2c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 2
