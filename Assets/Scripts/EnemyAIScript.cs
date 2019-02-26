@@ -6,13 +6,17 @@ using UnityEngine.AI;
 public class EnemyAIScript : MonoBehaviour
 {
 
-    public NavMeshAgent enemyMesh;
-    public string finishPointTag = "FinishPoint";
+    public Transform finishPoint;
+    private NavMeshAgent agent;
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-            enemyMesh.SetDestination(GameObject.FindWithTag(finishPointTag).transform.position);
-       // GetComponent<PlayerScript>().health -= damage;
+        agent = GetComponent<NavMeshAgent>();
+        InvokeRepeating("MoveToDist", 0, 1f); //Run MoveToDist() function ½ second (I hope this is not performance heavy :))
+    }
+
+    void MoveToDist()
+    {
+        agent.destination = finishPoint.position; //Make enemy move to the goals position
     }
 }

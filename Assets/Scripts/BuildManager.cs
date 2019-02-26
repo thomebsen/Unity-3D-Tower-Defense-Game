@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class BuildManager : MonoBehaviour
 {
 
     public static BuildManager instance;
+    private GameObject turretToBuild;
+    public NavMeshSurface surface;
 
     void Awake()
     {
@@ -22,10 +25,7 @@ public class BuildManager : MonoBehaviour
     void Start()
     {
         turretToBuild = standardTurretPrefab;
+        surface.BuildNavMesh();
     }
-    private GameObject turretToBuild;
-    public GameObject GetTurretToBuild()
-    {
-        return turretToBuild;
-    }
+    public GameObject GetTurretToBuild() => turretToBuild;
 }

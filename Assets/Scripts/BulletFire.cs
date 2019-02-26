@@ -7,6 +7,7 @@ public class BulletFire : MonoBehaviour
 
     private Transform target;
     public float speed = 70f;
+    public int turretDamage = 1;
     public GameObject impactEffect;
 
     public void Seek(Transform _target)
@@ -36,9 +37,10 @@ public class BulletFire : MonoBehaviour
 
     void HitTarget()
     {
-        GameObject effectIns = (GameObject) Instantiate(impactEffect, transform.position, transform.rotation);
-        Destroy(effectIns, 1.5f);
-        Destroy(gameObject);
+        GameObject effectIns = (GameObject) Instantiate(impactEffect, transform.position, transform.rotation); //Spawn a bullet shatter effect
+        Destroy(effectIns, 1.5f); //Destroy bullet shatter effect
+        Destroy(gameObject); //Destroy bullet
+        target.gameObject.GetComponent<EnemyHP>().health -= turretDamage; //Damage the target
     }
 
 

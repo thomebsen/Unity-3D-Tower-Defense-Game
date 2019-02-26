@@ -18,8 +18,4 @@ public class SpawnNodes : MonoBehaviour
             zPos -= 4;
         }
     }
-    // Update is called once per frame
-    void Update()
-    {
-    }
 }
