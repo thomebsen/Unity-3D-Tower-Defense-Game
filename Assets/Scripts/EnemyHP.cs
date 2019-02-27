@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class EnemyHP : MonoBehaviour
 {
-
-    public int health = 2;
+    public int enemyHealth = 20;
     BulletFire bulletFire;
 
-    void Update(){if (health <= 0){Destroy(gameObject);}}
+
+    void Start()
+    {
+    }
+
+    void Update(){
+        if (enemyHealth <= 0) {
+            Destroy(gameObject);
+        }
+    }
 
     
 

@@ -7,25 +7,29 @@ public class BuildManager : MonoBehaviour
 {
 
     public static BuildManager instance;
-    private GameObject turretToBuild;
-    public NavMeshSurface surface;
 
     void Awake()
     {
         if (instance != null)
         {
-            Debug.Log("More than one build manager in scene!");
+            Debug.LogError("More than one BuildManager in scene!");
             return;
         }
         instance = this;
     }
 
     public GameObject standardTurretPrefab;
+    public GameObject anotherTurretPrefab;
 
-    void Start()
+    private GameObject turretToBuild;
+
+    public GameObject GetTurretToBuild()
     {
-        turretToBuild = standardTurretPrefab;
-        surface.BuildNavMesh();
+        return turretToBuild;
     }
-    public GameObject GetTurretToBuild() => turretToBuild;
+
+    public void SetTurretToBuild(GameObject turret)
+    {
+        turretToBuild = turret;
+    }
 }

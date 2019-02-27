@@ -65,8 +65,10 @@
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
+    <Compile Include="Assets\Scripts\BakeOnAwake.cs" />
     <Compile Include="Assets\Scripts\BuildManager.cs" />
     <Compile Include="Assets\Scripts\BulletFire.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\EnemyAIScript.cs" />
     <Compile Include="Assets\Scripts\EnemyHP.cs" />
     <Compile Include="Assets\Scripts\EnemySpawnerScript.cs" />
@@ -74,11 +76,14 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerControlScript.cs" />
     <Compile Include="Assets\Scripts\PlayerDamageScript.cs" />
+    <Compile Include="Assets\Scripts\ShopController.cs" />
     <Compile Include="Assets\Scripts\SpawnNodes.cs" />
+    <Compile Include="Assets\Scripts\TurretBlueprint.cs" />
     <Compile Include="Assets\Scripts\TurretFire.cs" />
     <Compile Include="Assets\Scripts\WaveSpawner.cs" />
     <Compile Include="Assets\Turret.cs" />
     <Compile Include="Assets\UpdateNavMeshScript.cs" />
+    <None Include="Assets\tower-defense-assets\README.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Users/thoma/Documents/GitHub/Unity-3D-Tower-Defense-Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

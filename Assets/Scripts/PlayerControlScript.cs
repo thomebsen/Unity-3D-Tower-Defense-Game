@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerControlScript : MonoBehaviour
 {
 
-    public int health = 10;
+    public int playerHealth = 10;
+    public Text playerHealthText;
 
     void Start()
     {  
@@ -14,16 +16,11 @@ public class PlayerControlScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(health <= 0)
+        if(playerHealth <= 0)
         {
             Debug.Log("You died!");
         }
-    }
 
-    void OnGUI()
-    {
-        GUI.color = Color.black;
-        GUI.skin.label.fontSize = 20;
-        GUI.Label(new Rect(10, 10, 200, 40), "Health:" + health);
+        playerHealthText.text = "HEALTH: " + playerHealth.ToString();
     }
 }

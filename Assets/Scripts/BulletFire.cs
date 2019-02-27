@@ -40,7 +40,7 @@ public class BulletFire : MonoBehaviour
         GameObject effectIns = (GameObject) Instantiate(impactEffect, transform.position, transform.rotation); //Spawn a bullet shatter effect
         Destroy(effectIns, 1.5f); //Destroy bullet shatter effect
         Destroy(gameObject); //Destroy bullet
-        target.gameObject.GetComponent<EnemyHP>().health -= turretDamage; //Damage the target
+        target.gameObject.GetComponent<EnemyHP>().enemyHealth -= turretDamage; //Damage the target
     }
 
 

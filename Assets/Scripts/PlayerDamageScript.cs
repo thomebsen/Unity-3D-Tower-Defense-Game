@@ -27,8 +27,8 @@ public class PlayerDamageScript : MonoBehaviour
         //Check for a match with the specified name on any GameObject that collides with your GameObject
         if (col.gameObject.tag == finishCollider)
         {
-            psc.health -= damage;
-            Debug.Log(psc.health);
+            psc.playerHealth -= damage;
+            Debug.Log(psc.playerHealth);
             Destroy(col.gameObject, 0.2f);
         }
 

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
+using UnityEngine.EventSystems;
 
 public class NodeScript : MonoBehaviour
 {
@@ -32,6 +34,16 @@ public class NodeScript : MonoBehaviour
 
     void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+
+        if (buildManager.GetTurretToBuild() == null)
+        {
+            return;
+        }
+
         if(turret != null)
         {
             Debug.Log("Can't build here!");
@@ -45,7 +57,15 @@ public class NodeScript : MonoBehaviour
 
     void OnMouseEnter()
     {
-            rend.material.color = hoverColor;
+        if(EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+        if (buildManager.GetTurretToBuild() == null)
+        {
+            return;
+        }
+        rend.material.color = hoverColor;
 
     }
 
