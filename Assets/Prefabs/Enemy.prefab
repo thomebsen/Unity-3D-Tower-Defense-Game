@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2142667677491178391}
   - component: {fileID: 2142667677491178390}
   - component: {fileID: 5474498892269829932}
+  - component: {fileID: 196009200}
   m_Layer: 11
   m_Name: Enemy
   m_TagString: Enemy
@@ -145,8 +146,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34f71aa87eb5a604397a31ce09f6c8d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finishPoint: {fileID: 320495505363388788, guid: 0589d676f6ba3ad458a4c723ff5d15a6,
+  finishPoint: {fileID: 2928628421714283099, guid: 0589d676f6ba3ad458a4c723ff5d15a6,
     type: 3}
+  targetTag: 
+  turrets: []
 --- !u!114 &5474498892269829932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +162,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17d4c07aa19233e4cb11d1581bc2d2c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyCurrentHealth: 20
-  fullHpColor: {r: 0.20151861, g: 0.990566, b: 0.042052314, a: 0}
-  lowHpColor: {r: 1, g: 0.19973691, b: 0.1462264, a: 0}
+  enemyHealth: 88888
+--- !u!114 &196009200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142667677491178388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de7d347b17d50654eb043b624ac7de01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  range: 4
+  enemyTag: Turret

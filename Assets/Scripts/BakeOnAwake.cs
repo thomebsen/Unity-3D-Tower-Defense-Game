@@ -7,8 +7,7 @@ public class BakeOnAwake : MonoBehaviour
 {
 
     public NavMeshSurface surface;
-
-    void Start()
+    private void Awake()
     {
         surface.BuildNavMesh();
     }

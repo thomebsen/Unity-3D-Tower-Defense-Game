@@ -69,8 +69,9 @@
     <Compile Include="Assets\Scripts\BuildManager.cs" />
     <Compile Include="Assets\Scripts\BulletFire.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Scripts\EnemyAIScript.cs" />
-    <Compile Include="Assets\Scripts\EnemyHP.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyAIScript.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyHP.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\FindNearestTurret.cs" />
     <Compile Include="Assets\Scripts\EnemySpawnerScript.cs" />
     <Compile Include="Assets\Scripts\NodeScript.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />

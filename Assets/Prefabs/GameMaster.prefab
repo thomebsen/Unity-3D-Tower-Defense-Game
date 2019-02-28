@@ -74,8 +74,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a16b79d3be732ef4691178ecd4598144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surface: {fileID: 0}
   standardTurretPrefab: {fileID: 3198967923062232094, guid: 63a838f3e4ecdd84ba1c5fb91da5ccfc,
+    type: 3}
+  anotherTurretPrefab: {fileID: 989973856271681003, guid: cec561a5a462fa44385b56bdab3c22a3,
     type: 3}
 --- !u!114 &1544893527
 MonoBehaviour:
@@ -94,4 +95,4 @@ MonoBehaviour:
   spawnPoint: {fileID: 0}
   currentWaveText: {fileID: 0}
   waveCountdownText: {fileID: 0}
-  timeBetweenWaves: 10
+  timeBetweenWaves: 1e+11
