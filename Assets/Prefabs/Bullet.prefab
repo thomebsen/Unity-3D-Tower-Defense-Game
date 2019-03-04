@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7621024092294474716}
   - component: {fileID: 3405726795587153803}
   - component: {fileID: 2212546327940162852}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bullet
   m_TagString: bullet
   m_Icon: {fileID: 0}
@@ -91,5 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 40
+  explosionRadius: 0
+  turretDamage: 1
   impactEffect: {fileID: 5887698667519405923, guid: 6a39ab27fd8e5034ba91aefd409a20b3,
     type: 3}

@@ -148,8 +148,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finishPoint: {fileID: 2928628421714283099, guid: 0589d676f6ba3ad458a4c723ff5d15a6,
     type: 3}
-  targetTag: 
-  turrets: []
 --- !u!114 &5474498892269829932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17d4c07aa19233e4cb11d1581bc2d2c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 88888
+  enemyHealth: 5
 --- !u!114 &196009200
 MonoBehaviour:
   m_ObjectHideFlags: 0
