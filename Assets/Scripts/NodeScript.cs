@@ -11,8 +11,12 @@ public class NodeScript : MonoBehaviour
     public Color notEnoughMoneyColor;
     public Vector3 positionOffset;
 
-    [Header("Optional")]
+    [HideInInspector]
     public GameObject turret;
+    [HideInInspector]
+    public TurretBlueprint turretBlueprint;
+    [HideInInspector]
+    public bool isUpgraded = false;
 
     private Renderer rend;
     private Color startColor;
@@ -69,7 +73,31 @@ public class NodeScript : MonoBehaviour
         GameObject _turret = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
         turret = _turret;
 
+        turretBlueprint = blueprint;
+
         Debug.Log("Turret constructed!");
+    }
+
+    public void UpgradeTurret()
+    {
+        if (PlayerControlScript.Money < turretBlueprint.upgradeCost)
+        {
+            Debug.Log("Not enough money to upgrade that!");
+            return;
+        }
+
+        PlayerControlScript.Money -= turretBlueprint.upgradeCost;
+
+        //Getting rid of the old turret
+        Destroy(turret);
+
+        //Building a new turret instead of the old
+        GameObject _turret = (GameObject)Instantiate(turretBlueprint.upgradedPrefab, GetBuildPosition(), Quaternion.identity);
+        turret = _turret;
+
+        isUpgraded = true;
+
+        Debug.Log("Turret upgraded!");
     }
 
     void OnMouseEnter()
