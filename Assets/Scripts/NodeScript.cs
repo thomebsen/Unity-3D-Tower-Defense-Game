@@ -66,8 +66,17 @@ public class NodeScript : MonoBehaviour
         {
             return;
         }
-        rend.enabled = true;
-        rend.material.color = hoverColor;
+
+        if(buildManager.HasMoney)
+        {
+            rend.enabled = true;
+            rend.material.color = hoverColor;
+        }
+        else
+        {
+            rend.material.color = notEnoughMoneyColor;
+        }
+
 
     }
 

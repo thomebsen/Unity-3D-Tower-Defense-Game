@@ -25,6 +25,7 @@ public class BuildManager : MonoBehaviour
 
     //This syntax is a "property" 
     public bool CanBuild { get { return turretToBuild != null; } }
+    public bool HasMoney { get { return PlayerControlScript.Money >= turretToBuild.cost; } }
 
     public void BuildTurretOn(NodeScript node)
     {
