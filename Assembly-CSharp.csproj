@@ -91,6 +91,7 @@
     <Compile Include="Assets\Scripts\EnemyScripts\FindNearestTurret.cs" />
     <Compile Include="Assets\Scripts\EnemySpawnerScript.cs" />
     <Compile Include="Assets\Scripts\NodeScript.cs" />
+    <Compile Include="Assets\Scripts\NodeUI.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerControlScript.cs" />
     <Compile Include="Assets\Scripts\PlayerDamageScript.cs" />

@@ -41,14 +41,14 @@ public class NodeScript : MonoBehaviour
             return;
         }
 
-        if (!buildManager.CanBuild)
+        if(turret != null)
         {
+            buildManager.SelectNode(this);
             return;
         }
 
-        if(turret != null)
+        if (!buildManager.CanBuild)
         {
-            Debug.Log("Can't build here!");
             return;
         }
 

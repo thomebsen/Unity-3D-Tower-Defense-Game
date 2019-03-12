@@ -22,6 +22,9 @@ public class BuildManager : MonoBehaviour
     public GameObject missileLauncherPrefab;
 
     private TurretBlueprint turretToBuild;
+    private NodeScript selectedTurret;
+
+    public NodeUI nodeUI;
 
     //This syntax is a "property" 
     public bool CanBuild { get { return turretToBuild != null; } }
@@ -43,8 +46,29 @@ public class BuildManager : MonoBehaviour
         Debug.Log("Turret constructed! Money left: " + PlayerControlScript.Money);
     }
 
+    public void SelectNode(NodeScript node)
+    {
+        if(selectedTurret == node)
+        {
+            DeselectNode();
+            return;
+        }
+
+        selectedTurret = node;
+        turretToBuild = null;
+
+        nodeUI.SetTarget(node);
+    }
+
+    public void DeselectNode()
+    {
+        selectedTurret = null;
+        nodeUI.Hide();
+    }
+
     public void SelectTurretToBuild(TurretBlueprint turret)
     {
         turretToBuild = turret;
+        DeselectNode();
     }
 }
