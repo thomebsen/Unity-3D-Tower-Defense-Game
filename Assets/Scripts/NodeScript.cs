@@ -100,6 +100,16 @@ public class NodeScript : MonoBehaviour
         Debug.Log("Turret upgraded!");
     }
 
+    public void SellTurret()
+    {
+        PlayerControlScript.Money += turretBlueprint.GetSellAmount();
+
+        //Mabye add some destroy effect in here too..
+
+        Destroy(turret);
+        turretBlueprint = null;
+    }
+
     void OnMouseEnter()
     {
         if(EventSystem.current.IsPointerOverGameObject())

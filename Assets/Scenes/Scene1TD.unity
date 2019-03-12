@@ -609,6 +609,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 298187881}
     m_Modifications:
+    - target: {fileID: 2928628421714283099, guid: 0589d676f6ba3ad458a4c723ff5d15a6,
+        type: 3}
+      propertyPath: m_Name
+      value: FinishPoint
+      objectReference: {fileID: 0}
     - target: {fileID: 320495505363388788, guid: 0589d676f6ba3ad458a4c723ff5d15a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -663,11 +668,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2928628421714283099, guid: 0589d676f6ba3ad458a4c723ff5d15a6,
-        type: 3}
-      propertyPath: m_Name
-      value: FinishPoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0589d676f6ba3ad458a4c723ff5d15a6, type: 3}
@@ -1401,7 +1401,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1236328147}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 445951694}
+        m_MethodName: Sell
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1236328147
@@ -2229,7 +2240,8 @@ MonoBehaviour:
     prefab: {fileID: 5532553574519428039, guid: d48fcac7dc51a194d9a36c159600e257,
       type: 3}
     cost: 100
-    upgradedPrefab: {fileID: 0}
+    upgradedPrefab: {fileID: 5532553574519428039, guid: ab95dcd9b43c24630a93b5a9d963a890,
+      type: 3}
     upgradeCost: 200
 --- !u!1 &1909027698
 GameObject:
