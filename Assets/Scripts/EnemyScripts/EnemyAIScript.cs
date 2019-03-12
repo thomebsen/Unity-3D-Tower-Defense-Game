@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class EnemyAIScript : MonoBehaviour
 {
 
-    public GameObject finishPoint;
+    public Transform finishPoint;
     private NavMeshAgent agent;
     private NavMeshPath path;
 
@@ -42,11 +42,9 @@ public class EnemyAIScript : MonoBehaviour
             print("Path partial (GETTING BLOCKED)");
             fntScript = GetComponent<FindNearestTurret>();
 
-            if (fntScript.target == null)
-            {
-                return;
-            } else
-            {
+            if (fntScript.target == null) {
+                agent.SetDestination(finishPoint.transform.position);
+            } else {
                 Destroy(fntScript.target.gameObject);
             }
         }

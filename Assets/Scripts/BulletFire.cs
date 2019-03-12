@@ -42,7 +42,7 @@ public class BulletFire : MonoBehaviour
         GameObject effectIns = (GameObject) Instantiate(impactEffect, transform.position, transform.rotation); //Spawn a bullet shatter effect
         Destroy(effectIns, 5f); //Destroy bullet shatter effect
 
-        if(explosionRadius > 0f)
+        if(explosionRadius >= 0f)
         {
             Explode();
         } else
@@ -60,15 +60,14 @@ public class BulletFire : MonoBehaviour
         {
             if(collider.tag == "Enemy")
             {
-                Damage(collider.transform);
+                collider.gameObject.GetComponent<EnemyHP>().enemyHealth -= turretDamage; //Damage the target
             }
         }
     }
     
     void Damage(Transform enemy)
     {
-        //enemy.gameObject.GetComponent<EnemyHP>().enemyHealth -= turretDamage; //Damage the target
-        Destroy(enemy.gameObject);
+        enemy.gameObject.GetComponent<EnemyHP>().enemyHealth -= turretDamage; //Damage the target
     }
 
     void OnDrawGizmosSelected()

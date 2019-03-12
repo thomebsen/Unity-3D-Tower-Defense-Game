@@ -23,6 +23,7 @@ public class NodeScript : MonoBehaviour
     {
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
+        GetComponent<Renderer>().enabled = false;
 
         buildManager = BuildManager.instance;
     }
@@ -65,12 +66,14 @@ public class NodeScript : MonoBehaviour
         {
             return;
         }
+        rend.enabled = true;
         rend.material.color = hoverColor;
 
     }
 
     void OnMouseExit()
     {
-        rend.material.color = startColor;
+        rend.enabled = false;
+        // rend.material.color = Color.clear;
     }
 }

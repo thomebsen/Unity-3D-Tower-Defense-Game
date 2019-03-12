@@ -1415,6 +1415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b639bb57a9ec8c4dbef03070d93983b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  money: 60
 --- !u!1001 &2042966542177211585
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1652,7 +1653,7 @@ PrefabInstance:
         type: 3}
       propertyPath: missileLauncherPrefab
       value: 
-      objectReference: {fileID: 3064011316947084507, guid: a7e3359b29deb5c4d955e32706674b2b,
+      objectReference: {fileID: 5532553574519428039, guid: d48fcac7dc51a194d9a36c159600e257,
         type: 3}
     - target: {fileID: 2594095137692729008, guid: b05db3d46ce1a764fa5f81077b292f2a,
         type: 3}

@@ -56,6 +56,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\BulletTrailRenderScript.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+    <Compile Include="Assets\DOTween Examples\Basics.cs" />
+    <Compile Include="Assets\DOTween Examples\CustomPlugin Example\CustomPluginExampleBrain.cs" />
+    <Compile Include="Assets\DOTween Examples\CustomPlugin Example\CustomRange.cs" />
+    <Compile Include="Assets\DOTween Examples\CustomPlugin Example\CustomRangePlugin.cs" />
+    <Compile Include="Assets\DOTween Examples\Example Assets\DragTarget.cs" />
+    <Compile Include="Assets\DOTween Examples\Follow.cs" />
+    <Compile Include="Assets\DOTween Examples\Materials.cs" />
+    <Compile Include="Assets\DOTween Examples\Paths.cs" />
+    <Compile Include="Assets\DOTween Examples\Sequences.cs" />
+    <Compile Include="Assets\DOTween Examples\UGUI.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
@@ -77,8 +94,10 @@
     <Compile Include="Assets\Scripts\TurretBlueprint.cs" />
     <Compile Include="Assets\Scripts\TurretFire.cs" />
     <Compile Include="Assets\Scripts\WaveSpawner.cs" />
+    <Compile Include="Assets\Scripts\WaveSpawner2.cs" />
     <Compile Include="Assets\Turret.cs" />
     <Compile Include="Assets\UpdateNavMeshScript.cs" />
+    <None Include="Assets\Demigiant\DOTween\readme.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/thoma/Documents/Unity Projects/Unity 3D Tower Defense Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -294,6 +313,9 @@
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>C:/Users/thoma/Documents/Unity Projects/Unity 3D Tower Defense Game/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>C:/Users/thoma/Documents/Unity Projects/Unity 3D Tower Defense Game/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>

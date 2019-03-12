@@ -7,6 +7,7 @@ public class ShopController : MonoBehaviour
 
 
     BuildManager buildManager;
+    public int money = 60;
 
     void Start()
     {
@@ -17,6 +18,7 @@ public class ShopController : MonoBehaviour
     {
         Debug.Log("Standard Turret Selected");
         buildManager.SetTurretToBuild(buildManager.standardTurretPrefab);
+        
     }
 
     public void PurchaseMissileLauncher()
