@@ -30,22 +30,6 @@ public class BuildManager : MonoBehaviour
     public bool CanBuild { get { return turretToBuild != null; } }
     public bool HasMoney { get { return PlayerControlScript.Money >= turretToBuild.cost; } }
 
-    public void BuildTurretOn(NodeScript node)
-    {
-        if(PlayerControlScript.Money < turretToBuild.cost)
-        {
-            Debug.Log("Not enough money to build that!");
-            return;
-        }
-
-        PlayerControlScript.Money -= turretToBuild.cost;
-
-        GameObject turret =  (GameObject)Instantiate(turretToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
-        node.turret = turret;
-
-        Debug.Log("Turret constructed! Money left: " + PlayerControlScript.Money);
-    }
-
     public void SelectNode(NodeScript node)
     {
         if(selectedTurret == node)
@@ -70,5 +54,10 @@ public class BuildManager : MonoBehaviour
     {
         turretToBuild = turret;
         DeselectNode();
+    }
+
+    public TurretBlueprint GetTurretToBuild()
+    {
+        return turretToBuild;
     }
 }

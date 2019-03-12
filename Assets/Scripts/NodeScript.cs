@@ -52,9 +52,25 @@ public class NodeScript : MonoBehaviour
             return;
         }
 
-        buildManager.BuildTurretOn(this);
+        BuildTurret(buildManager.GetTurretToBuild());
+        //buildManager.BuildTurretOn(this);
     }
 
+    void BuildTurret(TurretBlueprint blueprint)
+    {
+        if (PlayerControlScript.Money < blueprint.cost)
+        {
+            Debug.Log("Not enough money to build that!");
+            return;
+        }
+
+        PlayerControlScript.Money -= blueprint.cost;
+
+        GameObject _turret = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
+        turret = _turret;
+
+        Debug.Log("Turret constructed!");
+    }
 
     void OnMouseEnter()
     {
