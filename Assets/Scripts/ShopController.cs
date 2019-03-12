@@ -5,25 +5,26 @@ using UnityEngine;
 public class ShopController : MonoBehaviour
 {
 
+    public TurretBlueprint standardTurret;
+    public TurretBlueprint shrekLauncher;
 
     BuildManager buildManager;
-    public int money = 60;
 
     void Start()
     {
         buildManager = BuildManager.instance;
     }
 
-    public void PurchaseStandardTurret()
+    public void SelectStandardTurret()
     {
         Debug.Log("Standard Turret Selected");
-        buildManager.SetTurretToBuild(buildManager.standardTurretPrefab);
+        buildManager.SelectTurretToBuild(standardTurret);
         
     }
 
-    public void PurchaseMissileLauncher()
+    public void SelectMissileLauncher()
     {
         Debug.Log("Missile Launcher Selected");
-        buildManager.SetTurretToBuild(buildManager.missileLauncherPrefab);
+        buildManager.SelectTurretToBuild(shrekLauncher);
     }
 }
