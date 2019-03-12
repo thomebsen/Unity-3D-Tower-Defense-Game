@@ -4,6 +4,7 @@ public class EnemyHP : MonoBehaviour
 {
     public int enemyHealth = 20;
     BulletFire bulletFire;
+    public int enemyMoney = 10;
 
 
     void Start()
@@ -12,6 +13,7 @@ public class EnemyHP : MonoBehaviour
 
     void Update(){
         if (enemyHealth <= 0) {
+            PlayerControlScript.Money += enemyMoney;
             Destroy(gameObject);
         }
     }
