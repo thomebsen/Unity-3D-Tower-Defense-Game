@@ -16,7 +16,7 @@ public class WaveSpawner : MonoBehaviour
 
     private void Update()
     {
-        if(countdown <= 0f)
+        if (countdown <= 0f)
         {
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
@@ -31,32 +31,12 @@ public class WaveSpawner : MonoBehaviour
     IEnumerator SpawnWave()
     {
         waveIndex++;
-        switch (waveIndex)
+
+        for (int i = 0; i < waveIndex; i++)
         {
-            case 5:
-                print("Why hello there good sir! Let me teach you about Trigonometry!");
-                break;
-            case 4:
-                print("Hello and good day!");
-                break;
-            case 3:
-                print("3");
-                break;
-            case 2:
-                print("2");
-                break;
-            case 1:
-                print("Wave 1");
-                for (int i = 0; i < waveIndex; i++)
-                {
-                    SpawnEnemy();
-                }
-                break;
-            default:
-                print("Incorrect intelligence level.");
-                break;
+            SpawnEnemy();
+            yield return new WaitForSeconds(0.5f);
         }
-        yield return new WaitForSeconds(0.5f);
     }
 
     void SpawnEnemy()
