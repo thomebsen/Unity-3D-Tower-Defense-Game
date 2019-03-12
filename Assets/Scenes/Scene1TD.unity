@@ -743,7 +743,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: '<b>SELL</b>
 
-    $50'
+    $5'
 --- !u!222 &435918466
 CanvasRenderer:
   m_ObjectHideFlags: 0
