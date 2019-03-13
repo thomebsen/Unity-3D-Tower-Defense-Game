@@ -39,13 +39,14 @@ public class BulletFire : MonoBehaviour
 
     void HitTarget()
     {
-        GameObject effectIns = (GameObject) Instantiate(impactEffect, transform.position, transform.rotation); //Spawn a bullet shatter effect
+        GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation); //Spawn a bullet shatter effect
         Destroy(effectIns, 5f); //Destroy bullet shatter effect
 
-        if(explosionRadius >= 0f)
+        if (explosionRadius > 0f)
         {
             Explode();
-        } else
+        }
+        else
         {
             Damage(target);
         }
@@ -56,18 +57,24 @@ public class BulletFire : MonoBehaviour
     void Explode()
     {
         Collider[] hitObjects = Physics.OverlapSphere(transform.position, explosionRadius);
-        foreach(Collider collider in hitObjects)
+        foreach (Collider collider in hitObjects)
         {
-            if(collider.tag == "Enemy")
+            if (collider.tag == "Enemy")
             {
-                collider.gameObject.GetComponent<EnemyHP>().enemyHealth -= turretDamage; //Damage the target
+                Damage(collider.transform);
+                //collider.GetComponent<EnemyHP>().enemyHealth -= turretDamage; //Damage the target
             }
         }
     }
-    
+
     void Damage(Transform enemy)
     {
-        enemy.gameObject.GetComponent<EnemyHP>().enemyHealth -= turretDamage; //Damage the target
+        EnemyHP e = enemy.GetComponent<EnemyHP>();
+
+        if (e != null)
+        {
+            e.TakeDamage(turretDamage);
+        }
     }
 
     void OnDrawGizmosSelected()

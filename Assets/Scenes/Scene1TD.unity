@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4488629, g: 0.49892598, b: 0.5757019, a: 1}
+  m_IndirectSpecularColor: {r: 0.4488631, g: 0.4989264, b: 0.5757022, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2862,7 +2862,7 @@ PrefabInstance:
     - target: {fileID: 1544893527, guid: b05db3d46ce1a764fa5f81077b292f2a, type: 3}
       propertyPath: enemyPrefab
       value: 
-      objectReference: {fileID: 2142667677491178381, guid: 00e883b7b0aff554e9dcadadc3bb83fa,
+      objectReference: {fileID: 7341962372187991763, guid: b97a60d991894a147944eb24bc8dc63d,
         type: 3}
     - target: {fileID: 1544893527, guid: b05db3d46ce1a764fa5f81077b292f2a, type: 3}
       propertyPath: timeBetweenWaves
@@ -2909,22 +2909,22 @@ PrefabInstance:
     - target: {fileID: 5725647719070594547, guid: 4db61e7f1d9e2ec488190eeeedc07ace,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5725647719070594547, guid: 4db61e7f1d9e2ec488190eeeedc07ace,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5725647719070594547, guid: 4db61e7f1d9e2ec488190eeeedc07ace,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5725647719070594547, guid: 4db61e7f1d9e2ec488190eeeedc07ace,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5725647719070594547, guid: 4db61e7f1d9e2ec488190eeeedc07ace,
         type: 3}
@@ -2939,7 +2939,7 @@ PrefabInstance:
     - target: {fileID: 5725647719070594547, guid: 4db61e7f1d9e2ec488190eeeedc07ace,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 5725647719070594547, guid: 4db61e7f1d9e2ec488190eeeedc07ace,
         type: 3}

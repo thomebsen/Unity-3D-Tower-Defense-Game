@@ -92,6 +92,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 40
   explosionRadius: 0
-  turretDamage: 1
+  turretDamage: 20
   impactEffect: {fileID: 5887698667519405923, guid: 6a39ab27fd8e5034ba91aefd409a20b3,
     type: 3}
